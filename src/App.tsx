@@ -1,10 +1,14 @@
 import { useState, type Dispatch, type SetStateAction } from 'react';
 import {
   Users, Target, Search, Lightbulb, PenTool, BarChart3,
-  PlayCircle, ExternalLink, ArrowLeft, CheckCircle2,
+  ExternalLink, ArrowLeft, CheckCircle2, FolderGit2,
   BookOpen, Target as TargetIcon, Brain, Star, Leaf,
   type LucideIcon
 } from 'lucide-react';
+
+// Prefix for assets in the /public folder so they resolve correctly
+// whether the app is served at the root or under a GitHub Pages sub-path.
+const BASE_URL = import.meta.env.BASE_URL;
 
 // Shared prop types
 type SetView = Dispatch<SetStateAction<string>>;
@@ -31,7 +35,7 @@ const TEAM_MEMBERS = [
     name: 'Mohamad Syafiq Bin Mohd Tohid',
     idNumber: '2025195737',
     role: 'Project Leader',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Syafiq&backgroundColor=e2e8f0',
+    avatar: `${BASE_URL}images/syafiq.jpg`,
     reflection: {
       learning: {
         what: "I am learning how to conduct deep user research, utilizing empathy maps and persona profiling to understand our target demographic.",
@@ -66,7 +70,7 @@ const TEAM_MEMBERS = [
     name: 'Muhammad Faiz Ellmy Bin Rizatulnizam',
     idNumber: '2025130553',
     role: 'UX Researcher & Analyst',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Faiz&backgroundColor=e2e8f0',
+    avatar: `${BASE_URL}images/faiz.PNG`,
     reflection: {
       learning: {
         what: "I am learning to utilize design thinking principles to create intuitive, engaging, and accessible mobile interfaces for campus students.",
@@ -95,79 +99,8 @@ const TEAM_MEMBERS = [
         remember: "Seeing my initial rough sketches transform into a fully functional-looking prototype is a proud memory I will retain forever."
       }
     }
-  },
-  {
-    id: 'hasif',
-    name: 'Hasif Irfan Bin Sapuan',
-    idNumber: '2025342669',
-    role: 'UI designer',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Hasif&backgroundColor=e2e8f0',
-    reflection: {
-      learning: {
-        what: "I am learning how to apply critical and creative thinking frameworks (like SCAMPER and Fishbone diagrams) to solve real-world problems in software development.",
-        why: "To transition from just writing code to actually designing solutions that address genuine user pain points effectively.",
-        project: "I learned that developing a campus recycling app isn't just about UI/UX; it's about understanding the logistics, campus infrastructure, and human psychology regarding waste disposal."
-      },
-      goals: {
-        progress: "I tracked my progress against our Use Case Exploration Canvas. Seeing our initial problem statements translate into tangible app features (like the Smart Route Generator) showed we were hitting our milestones.",
-        help: "The structured workshops and consistent communication with my team members kept me aligned with our core objectives.",
-        preventing: "Time constraints due to other assignments occasionally slowed down our prototyping phase, but proper task delegation helped overcome this."
-      },
-      dynamics: {
-        help: "My peers provided excellent insights during the ideation phase, especially when identifying the root causes of poor recycling habits among resident students.",
-        encourage: "When we struggled to figure out an innovative gamification feature, the team brainstormed together until we came up with the direct Mixue Wallet injection idea, which motivated me to push forward."
-      },
-      thinking: {
-        goodAt: "I excel at analyzing technical feasibility and structuring the overall flow of the application to ensure it is lightweight and user-friendly.",
-        limitations: "I sometimes struggle with the initial visual design aesthetics and rely heavily on my team's input for UI color theory and layout.",
-        madeMeThink: "Applying the 'Reverse' lens in SCAMPER to flip the traditional reward timeline into an instant-gratification model really challenged my conventional way of thinking about user retention.",
-        mistakes: "Initially, I overcomplicated the map feature. Realizing the mistake during peer discussions taught me that minifying the UI to focus only on 'Quick-Drop Routes' is much more effective."
-      },
-      other: {
-        like: "I deeply appreciate the real-world impact this project aims to achieve for UiTM Arau's sustainability efforts.",
-        workOnNow: "I need to improve my time-management skills to balance intensive prototyping with documentation.",
-        future: "I plan to explore more advanced user-testing methodologies, like A/B testing, for future software projects.",
-        remember: "I will always remember the 'Aha!' moment our team had when we connected the university merit system to our app's recycling points."
-      }
-    }
-  },
-
-
-  {
-    id: 'amirah',
-    name: 'Amirah Hajar Binti Nor Hazani',
-    idNumber: '2025385861',
-    role: 'Content Analysis and QA Tester',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Amirah&backgroundColor=e2e8f0',
-    reflection: {
-      learning: {
-        what: "I am learning how to structure testing protocols, evaluate usability using metrics like SUS (System Usability Scale), and craft compelling content.",
-        why: "To validate our creative assumptions objectively and ensure the final product meets high quality and educational standards.",
-        project: "I learned that even the most innovative ideas (like the Dorm-to-Dorm Pickup) require clear, concise instructions within the app to be utilized correctly."
-      },
-      goals: {
-        progress: "I monitored our progress through structured peer review sessions and checking off the requirements defined in our Workshop 1 and 2 documentation.",
-        help: "The clearly defined 'Use Case Exploration Canvas' provided an excellent checklist for my testing scenarios.",
-        preventing: "Finding adequate time to simulate comprehensive user testing within the tight academic deadlines was a major hurdle."
-      },
-      dynamics: {
-        help: "The team was highly receptive to my critical feedback during the prototyping phase, willing to make changes when a feature failed a usability check.",
-        encourage: "When compiling the final presentation and feeling the pressure of documentation, my teammates stepped in to help organize the assets and data."
-      },
-      thinking: {
-        goodAt: "I excel at finding logical loopholes in user flows, ensuring that every button click leads to a predictable and helpful outcome.",
-        limitations: "I sometimes struggle to generate the initial 'wild' ideas during brainstorming, preferring to refine and evaluate existing concepts instead.",
-        madeMeThink: "Developing the 'Daily Eco-Quiz' feature made me think critically about how to gamify learning without it feeling like an academic chore.",
-        mistakes: "I initially overlooked the edge case of students not knowing how to classify e-waste. This mistake taught me the importance of providing in-app guidance and 'Help' sections."
-      },
-      other: {
-        like: "I appreciated the comprehensive nature of this project—we didn't just build an app; we researched a real environmental issue at UiTM.",
-        workOnNow: "I need to work on being more vocal during the early, unstructured phases of ideation.",
-        future: "I plan to study advanced UX copywriting to better guide users through complex digital processes in the future.",
-        remember: "I will forever remember the satisfaction of finalizing our SCAMPER framework, seeing how drastically it improved our initial, basic idea."
-      }
-    }
   }
+ 
 ];
 
 const PlaceholderImage = ({ title, icon: Icon, aspectRatio = "aspect-video", src }: PlaceholderImageProps) => {
@@ -275,12 +208,12 @@ function ProjectPortfolio({ setView }: ProjectPortfolioProps) {
           <div className="space-y-4">
             <h3 className="text-xl font-bold flex items-center gap-2"><Search className="w-5 h-5 text-green-600"/> Fishbone Diagram</h3>
             <p className="text-sm text-gray-600 mb-4">Root cause analysis of poor campus recycling practices.</p>
-            <PlaceholderImage title="Upload Fishbone Diagram Here" icon={Brain} src="./images/fishbone.png" />
+            <PlaceholderImage title="Upload Fishbone Diagram Here" icon={Brain} src={`${BASE_URL}images/fishbone.PNG`} />
           </div>
           <div className="space-y-4">
             <h3 className="text-xl font-bold flex items-center gap-2"><Lightbulb className="w-5 h-5 text-yellow-500"/> SCAMPER Framework</h3>
             <p className="text-sm text-gray-600 mb-4">Ideation process yielding features like Instant Rewards and AI Scanning.</p>
-            <PlaceholderImage title="Upload SCAMPER Ideation Here" icon={Lightbulb} src="./images/scamper.png" />
+            <PlaceholderImage title="Upload SCAMPER Ideation Here" icon={Lightbulb} />
           </div>
         </div>
       </section>
@@ -293,9 +226,9 @@ function ProjectPortfolio({ setView }: ProjectPortfolioProps) {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
-          <PlaceholderImage title="Upload Sketch 1" icon={PenTool} aspectRatio="aspect-[3/4]" src="./images/sketch1.png" />
-          <PlaceholderImage title="Upload Sketch 2" icon={PenTool} aspectRatio="aspect-[3/4]" src="./images/sketch2.png" />
-          <PlaceholderImage title="Upload Real UI Design" icon={TargetIcon} aspectRatio="aspect-[3/4]" src="./images/real-ui.png" />
+          <PlaceholderImage title="Upload Sketch 1" icon={PenTool} aspectRatio="aspect-[3/4]" src={`${BASE_URL}images/sketch_1.PNG`} />
+          <PlaceholderImage title="Upload Sketch 2" icon={PenTool} aspectRatio="aspect-[3/4]" src={`${BASE_URL}images/sketch_2.jpg`} />
+          <PlaceholderImage title="Upload Real UI Design" icon={TargetIcon} aspectRatio="aspect-[3/4]" src={`${BASE_URL}images/real_ui_design.JPG`} />
         </div>
       </section>
 
@@ -307,17 +240,24 @@ function ProjectPortfolio({ setView }: ProjectPortfolioProps) {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <PlaceholderImage title="Upload Questionnaire Screenshot" icon={BookOpen} aspectRatio="aspect-square" src="./images/questionnaire.png" />
-          <PlaceholderImage title="Upload SUS Calculation / Pie Chart" icon={BarChart3} aspectRatio="aspect-square" src="./images/sus-chart.png" />
-          <PlaceholderImage title="Upload User Feedback Bar Chart" icon={BarChart3} aspectRatio="aspect-square" src="./images/feedback-chart.png" />
+          <PlaceholderImage title="Upload Questionnaire Screenshot" icon={BookOpen} aspectRatio="aspect-square" src={`${BASE_URL}images/questionaire.jpg`} />
+          <PlaceholderImage title="Upload SUS Calculation / Pie Chart" icon={BarChart3} aspectRatio="aspect-square" />
+          <PlaceholderImage title="Upload User Feedback Bar Chart" icon={BarChart3} aspectRatio="aspect-square" />
         </div>
       </section>
 
       {/* FINAL DEMO & RATING */}
       <section className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 bg-gray-900 rounded-3xl p-2 relative group overflow-hidden">
-          {/* Note: If you want to use a real video later, replace this component with an <iframe src="your-youtube-embed-link"></iframe> */}
-          <PlaceholderImage title="Upload Video Demo (.mp4 / Youtube Link)" icon={PlayCircle} aspectRatio="aspect-video" src="./images/video-thumbnail.png" />
+          <div className="w-full aspect-video rounded-2xl overflow-hidden">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/XrMQioYx3Z8"
+              title="Uni Recycle Video Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
         
         <div className="space-y-6 flex flex-col justify-center">
@@ -333,7 +273,9 @@ function ProjectPortfolio({ setView }: ProjectPortfolioProps) {
           </div>
 
           <a 
-            href="#" 
+            href="https://syffiq.github.io/uni-recycle-prototype/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-white border-2 border-gray-200 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 p-6 rounded-3xl flex items-center justify-between group"
           >
             <div>
@@ -341,6 +283,52 @@ function ProjectPortfolio({ setView }: ProjectPortfolioProps) {
               <p className="text-sm text-gray-500 group-hover:text-gray-400">View the hosted static website</p>
             </div>
             <ExternalLink className="w-6 h-6" />
+          </a>
+        </div>
+      </section>
+
+      {/* RESOURCES */}
+      <section className="space-y-8">
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900">Project Resources</h2>
+          <p className="text-gray-500 mt-3">Source code repositories for this portfolio site and the interactive prototype.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <a
+            href="https://github.com/SYFFIQ/uni-recycle-prototype"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 hover:bg-gray-800 transition-colors p-8 rounded-3xl flex items-center justify-between group shadow-sm"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gray-800 group-hover:bg-gray-700 rounded-2xl flex items-center justify-center shrink-0 transition-colors">
+                <FolderGit2 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-white">Uni Recycle Prototype</h3>
+                <p className="text-sm text-gray-400">github.com/SYFFIQ/uni-recycle-prototype</p>
+              </div>
+            </div>
+            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors shrink-0" />
+          </a>
+
+          <a
+            href="https://github.com/SYFFIQ/uni-recycle-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 hover:bg-gray-800 transition-colors p-8 rounded-3xl flex items-center justify-between group shadow-sm"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gray-800 group-hover:bg-gray-700 rounded-2xl flex items-center justify-center shrink-0 transition-colors">
+                <FolderGit2 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-white">Uni Recycle Portfolio</h3>
+                <p className="text-sm text-gray-400">github.com/SYFFIQ/uni-recycle-portfolio</p>
+              </div>
+            </div>
+            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors shrink-0" />
           </a>
         </div>
       </section>
