@@ -33,8 +33,8 @@ const TEAM_MEMBERS = [
     {
     id: 'syafiq',
     name: 'Mohamad Syafiq Bin Mohd Tohid',
-    idNumber: '2025195737',
-    role: 'Project Leader',
+    idNumber: '2025195737 ',
+    role: 'Project Leader & UI Developer',
     avatar: `${BASE_URL}/images/syafiq.jpg`,
     reflection: {
       learning: {
@@ -132,6 +132,41 @@ const TEAM_MEMBERS = [
         workOnNow: "I need to work on being more vocal during the early, unstructured phases of ideation.",
         future: "I plan to study advanced UX copywriting to better guide users through complex digital processes in the future.",
         remember: "I will forever remember the satisfaction of finalizing our SCAMPER framework, seeing how drastically it improved our initial, basic idea."
+      }
+    }
+  },
+   {
+    id: 'hasif',
+    name: 'Hasif Irfan Bin Sapuan',
+    idNumber: '2025342669',
+    role: 'Helper',
+    avatar: `${BASE_URL}/images/hasif.jpg`,
+    reflection: {
+      learning: {
+        what: "I am learning how to apply critical and creative thinking frameworks (like SCAMPER and Fishbone diagrams) to solve real-world problems in software development.",
+        why: "To transition from just writing code to actually designing solutions that address genuine user pain points effectively.",
+        project: "I learned that developing a campus recycling app isn't just about UI/UX; it's about understanding the logistics, campus infrastructure, and human psychology regarding waste disposal."
+      },
+      goals: {
+        progress: "I tracked my progress against our Use Case Exploration Canvas. Seeing our initial problem statements translate into tangible app features (like the Smart Route Generator) showed we were hitting our milestones.",
+        help: "The structured workshops and consistent communication with my team members kept me aligned with our core objectives.",
+        preventing: "Time constraints due to other assignments occasionally slowed down our prototyping phase, but proper task delegation helped overcome this."
+      },
+      dynamics: {
+        help: "My peers provided excellent insights during the ideation phase, especially when identifying the root causes of poor recycling habits among resident students.",
+        encourage: "When we struggled to figure out an innovative gamification feature, the team brainstormed together until we came up with the direct Mixue Wallet injection idea, which motivated me to push forward."
+      },
+      thinking: {
+        goodAt: "I excel at analyzing technical feasibility and structuring the overall flow of the application to ensure it is lightweight and user-friendly.",
+        limitations: "I sometimes struggle with the initial visual design aesthetics and rely heavily on my team's input for UI color theory and layout.",
+        madeMeThink: "Applying the 'Reverse' lens in SCAMPER to flip the traditional reward timeline into an instant-gratification model really challenged my conventional way of thinking about user retention.",
+        mistakes: "Initially, I overcomplicated the map feature. Realizing the mistake during peer discussions taught me that minifying the UI to focus only on 'Quick-Drop Routes' is much more effective."
+      },
+      other: {
+        like: "I deeply appreciate the real-world impact this project aims to achieve for UiTM Arau's sustainability efforts.",
+        workOnNow: "I need to improve my time-management skills to balance intensive prototyping with documentation.",
+        future: "I plan to explore more advanced user-testing methodologies for future software projects.",
+        remember: "I will always remember the moment our team had when we came up with the idea of integrating the university merit system with our app's recycling points."
       }
     }
   }
