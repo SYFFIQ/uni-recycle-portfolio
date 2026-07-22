@@ -80,7 +80,7 @@ const TEAM_MEMBERS = [
       goals: {
         progress: "I knew I was progressing when our initial paper sketches evolved into high-fidelity Figma screens that accurately reflected our proposed solutions.",
         help: "Constant feedback loops and rapid iteration sessions with the team helped me refine the visual hierarchy of the app.",
-        preventing: "Balancing the desire to add innovative features with the necessity of keeping the app 'lightweight' (under 12MB as planned) was a constant creative struggle."
+        preventing: "Balancing the desire to add innovative features with the necessity of keeping the app 'lightweight' was a constant creative struggle."
       },
       dynamics: {
         help: "My team provided the core functional requirements, which gave me the boundaries I needed to design effective user flows.",
@@ -135,11 +135,11 @@ const TEAM_MEMBERS = [
       }
     }
   },
-   {
+  {
     id: 'hasif',
     name: 'Hasif Irfan Bin Sapuan',
     idNumber: '2025342669',
-    role: 'Helper',
+    role: '',
     avatar: `${BASE_URL}/images/hasif.jpg`,
     reflection: {
       learning: {
